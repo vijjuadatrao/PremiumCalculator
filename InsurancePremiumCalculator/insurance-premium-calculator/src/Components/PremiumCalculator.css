@@ -1,0 +1,20 @@
+/* Label + Input wrapper */
+.container label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* Input and Select styles */
+.container input,
+.container select {
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  background-color: #fafafa;
+}
