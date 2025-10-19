@@ -30,9 +30,11 @@ const PremiumCalculator: React.FC = () => {
         //     [name]: name === 'age' || name === 'deathCoverAmount' ? Number(value) : value
         // }));
         // Logic to check if all fields are filled and occupation is changed
-        if (allFieldsFilled(updatedForm) && name === 'occupation') {
+        if (allFieldsFilled(updatedForm) || name === 'occupation') {
             calculatePremium(updatedForm);
-        } 
+        } else {
+            setPremium(null); // Reset premium if not all fields are filled
+        }
     }
     // Function to calculate premium based on the form data
     const calculatePremium = (data: PremiumCalculatorRequest) => {

@@ -59,7 +59,7 @@ describe('PremiumCalculator Component', () => {
     ).toBeInTheDocument();
   });
 
-  test('does not calculate premium if occupation is changed before all fields are filled', () => {
+  test('does calculate premium if occupation is changed or if all fields are filled', () => {
     render(<PremiumCalculator />);
 
     fireEvent.change(screen.getByLabelText(/Usual Occupation/i), {
@@ -68,6 +68,19 @@ describe('PremiumCalculator Component', () => {
 
     expect(
       screen.queryByText(/Your Monthly Premium is/i)
+    ).toBeInTheDocument();
+  });
+
+  test('null input on any of the field should not show the premium', () => {
+    render(<PremiumCalculator />);
+
+    fireEvent.change(screen.getByLabelText(/Age/i), {
+      target: { name: 'age', value: '' },
+    });
+
+    expect(
+      screen.queryByText(/Your Monthly Premium is/i)
     ).not.toBeInTheDocument();
   });
+
 });
