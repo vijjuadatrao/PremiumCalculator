@@ -13,11 +13,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+<img width="477" height="597" alt="image" src="https://github.com/user-attachments/assets/d5ce4d11-1fc2-4b47-945b-03e7553d2c09" />
+
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Added the jest libraries to run the tests of this repo
+<img width="518" height="186" alt="image" src="https://github.com/user-attachments/assets/f606f167-5a31-4263-8f32-34f8df4d7c22" />
+
 
 ### `npm run build`
 
